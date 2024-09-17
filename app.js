@@ -3,8 +3,8 @@ const player = document.getElementById("player");
 const infoDisplay = document.getElementById("info-display");
 
 const width = 8;
-let playerGo = "black";
-player.textContent = "crni";
+let playerGo = "white";
+player.textContent = "beli";
 
 const startPieces = [
   rook,
@@ -89,10 +89,10 @@ function createBoard() {
     }
 
     if (i <= 15) {
-      square.firstChild.firstChild.classList.add("black");
+      square.firstChild.firstChild.classList.add("white");
     }
     if (i >= 48) {
-      square.firstChild.firstChild.classList.add("white");
+      square.firstChild.firstChild.classList.add("black");
     }
 
     gameboard.append(square);
@@ -157,14 +157,14 @@ function dragDrop(e) {
 }
 
 function changePlayer() {
-  if (playerGo === "black") {
+  if (playerGo === "white") {
     reverseIds();
-    playerGo = "white";
-    player.textContent = "beli";
-  } else {
-    revertId();
     playerGo = "black";
     player.textContent = "crni";
+  } else {
+    revertId();
+    playerGo = "white";
+    player.textContent = "beli";
   }
 }
 
