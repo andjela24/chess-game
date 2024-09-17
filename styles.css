@@ -1,20 +1,34 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #b3cde0, #6497b1);
+    font-family: 'Georgia', serif;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 #gameboard {
-    width: 320px;
-    height: 320px;
+    width: 480px;
+    height: 480px;
     background-color: black;
     display: flex;
     flex-wrap: wrap;
 }
 
 .square {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     position: relative;
 }
 
 .square svg {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     margin: 5px;
     position: relative;
     z-index: -10;
@@ -31,11 +45,11 @@ path {
 }
 
 .green {
-    background-color: rgb(8, 68, 22);
+    background-color: rgb(32, 66, 40);
 }
 
 .brown {
-    background-color: rgb(56, 30, 7);
+    background-color: rgb(142, 146, 89);
 }
 
 .black {
@@ -46,41 +60,10 @@ path {
     fill: white;
 }
 
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+p,
+#info-display {
+    font-family: 'Georgia', serif;
+    color: #333;
+    font-size: 20px;
+    margin-top: 20px;
 }
-
-.chessboard {
-    display: grid;
-    grid-template-columns: repeat(8, 60px);
-    grid-template-rows: repeat(8, 60px);
-    border: 2px solid #333;
-}
-
-.square {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-}
-
-.square.light {
-    background-color: #eee;
-}
-
-.square.dark {
-    background-color: #333;
-    color: #fff;
-}
-
-.piece {
-    font-size: 40px;
-    cursor: pointer;
-} */
